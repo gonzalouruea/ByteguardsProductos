@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.geometry.Insets?>
+<VBox fx:controller="grupofp.controlador.EliminarPedidoController"
+      xmlns:fx="http://javafx.com/fxml" spacing="10">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Eliminar Pedido" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+
+    <Label text="Pedidos Pendientes"/>
+    <ListView fx:id="listaPedidos" prefHeight="200"/>
+
+    <TextField fx:id="tfNumPedido" promptText="Ingrese número de pedido"/>
+
+    <Button text="Eliminar Pedido" onAction="#eliminarPedido"/>
+</VBox>

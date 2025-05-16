@@ -1,4 +1,5 @@
-package test.java.grupofp.modelo;
+package grupofp.modelo;
+
 
 import static org.junit.jupiter.api.Assertions.assertEquals; // Para usar métodos estáticos como assertEquals
 import static org.junit.jupiter.api.Assertions.assertTrue;

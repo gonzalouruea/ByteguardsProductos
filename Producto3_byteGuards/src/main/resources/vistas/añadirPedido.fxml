@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.geometry.Insets?>
+<VBox fx:controller="grupofp.controlador.AniadirPedidoController"
+      xmlns:fx="http://javafx.com/fxml" spacing="10">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+
+
+    <Label text="Añadir Nuevo Pedido" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+
+    <TextField fx:id="tfNumPedido" promptText="Número de Pedido"/>
+    <TextField fx:id="tfCantidad" promptText="Cantidad"/>
+    <TextField fx:id="tfEmail" promptText="Email Cliente"/>
+    <TextField fx:id="tfProductoID" promptText="ID Producto"/>
+
+    <Button text="Registrar Pedido" onAction="#crearPedido"/>
+</VBox>
