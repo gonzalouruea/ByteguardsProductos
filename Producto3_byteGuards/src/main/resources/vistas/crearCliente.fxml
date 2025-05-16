@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane fx:controller="grupofp.controlador.AltaClienteController"
+          xmlns:fx="http://javafx.com/fxml"
+          hgap="10" vgap="10" padding="20">
+
+    <Label text="Nombre:" labelFor="$tfNombre" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <TextField fx:id="tfNombre" promptText="Introduce el nombre" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+    <Label text="Domicilio:" labelFor="$tfDomicilio" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <TextField fx:id="tfDomicilio" promptText="Introduce el domicilio" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+    <Label text="NIF:" labelFor="$tfNif" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <TextField fx:id="tfNif" promptText="Introduce el NIF" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+    <Label text="Email:" labelFor="$tfEmail" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <TextField fx:id="tfEmail" promptText="Introduce el email" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+    <Label text="Descuento:" labelFor="$tfDescuento" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+    <TextField fx:id="tfDescuento" promptText="Ej: 0.15 para 15%" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+    <Button text="Crear Cliente" GridPane.rowIndex="5" GridPane.columnIndex="1"
+            onAction="#crearCliente"/>
+
+</GridPane>

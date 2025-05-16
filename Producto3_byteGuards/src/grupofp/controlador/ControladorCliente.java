@@ -1,15 +1,16 @@
 package grupofp.controlador;
 
 import grupofp.modelo.Datos;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class ControladorCliente {
+
     private Datos datos;
 
     public ControladorCliente() {
-        datos = new Datos ();
+        datos = new Datos();
     }
+
     public Datos getDatos() {
         return datos;
     }
@@ -18,45 +19,32 @@ public class ControladorCliente {
         this.datos = datos;
     }
 
+    /**
+     * Método para dar de alta a un cliente, validando su NIF y correo electrónico.
+     */
+    public void entradaCliente(String nombre, String domicilio, String nif, String email, Float descuento)
+            throws Controlador.NIFValidationException, Controlador.EmailValidationException {
 
-    public void entradaCliente(String nombre, String domicilio, String nif, String email, Float descuento) throws Controlador.NIFValidationException, Controlador.EmailValidationException {
-
-        if (nif.length() >= 9) {
-            throw new Controlador.NIFValidationException("El NIF no puede tener más de 9 dígitos.");
+        if (nif == null || nif.length() >= 9) {
+            throw new Controlador.NIFValidationException("El NIF no puede ser nulo ni tener más de 9 caracteres.");
         }
 
-        // Validación del correo electrónico
-        if (email == null) {
-            throw new Controlador.EmailValidationException("El correo electrónico no puede ser nulo");
+        if (email == null || !email.contains("@")) {
+            throw new Controlador.EmailValidationException("El correo electrónico debe ser válido y contener '@'.");
         }
 
-        if (!email.contains("@")) {
-            throw new Controlador.EmailValidationException("El correo electrónico debe contener '@'");
-        }
-
-        if (descuento != null) {
-            datos.addCliente(nombre, domicilio, nif, email, descuento);
-        } else {
-            datos.addCliente(nombre, domicilio, nif, email, null);
-        }
+        datos.addCliente(nombre, domicilio, nif, email, descuento);
     }
 
-
-    public ArrayList recogerTodosClientes(){
-        ArrayList<String> arrClientes = new ArrayList<>();
-        arrClientes= datos.recorrerTodosClientes();
-        return arrClientes;
-    }
-    public ArrayList recogerClienteEstandar(){
-        ArrayList<String> arrClienteEstandar = new ArrayList<>();
-        arrClienteEstandar = datos.recorrerClienteE();
-        return arrClienteEstandar;
+    public ArrayList<String> recogerTodosClientes() {
+        return datos.recorrerTodosClientes();
     }
 
-    public ArrayList recogerClientePremium(){
-        ArrayList<String> arrClientePremium = new ArrayList<>();
-        arrClientePremium = datos.recorrerClienteP();
-        return arrClientePremium;
+    public ArrayList<String> recogerClienteEstandar() {
+        return datos.recorrerClienteE();
     }
 
+    public ArrayList<String> recogerClientePremium() {
+        return datos.recorrerClienteP();
+    }
 }

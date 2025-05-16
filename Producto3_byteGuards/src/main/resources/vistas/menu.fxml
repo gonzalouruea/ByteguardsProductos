@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="grupofp.controlador.MenuController">
+
+    <top>
+        <MenuBar>
+            <menus>
+                <Menu mnemonicParsing="false" text="Cliente">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Añadir Cliente" onAction="#mostrarAltaCliente"/>
+                        <MenuItem mnemonicParsing="false" text="Mostrar Clientes" onAction="#mostrarClientes"/>
+                        <MenuItem mnemonicParsing="false" text="Mostrar clientes estandar" onAction="#mostrarClientesEstandar"/>
+                        <MenuItem mnemonicParsing="false" text="Mostrar clientes premium" onAction="#mostrarClientesPremium"/>
+                        <MenuItem mnemonicParsing="false" text="Salir" onAction="#salirAplicacion"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Artículo">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Añadir Artículo"/>
+                        <MenuItem mnemonicParsing="false" text="Mostrar Artículos"/>
+                        <MenuItem mnemonicParsing="false" text="Salir"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Pedido">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Añadir Pedido"/>
+                        <MenuItem mnemonicParsing="false" text="Eliminar Pedido"/>
+                        <MenuItem mnemonicParsing="false" text="Mostrar todos los pedidos pendientes"/>
+                        <MenuItem mnemonicParsing="false" text="Filtrar pedidos pendientes por cliente"/>
+                        <MenuItem mnemonicParsing="false" text="Mostrar todos los pedidos enviados"/>
+                        <MenuItem mnemonicParsing="false" text="Filtrar pedidos envidos por cliente"/>
+                        <MenuItem mnemonicParsing="false" text="Salir"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Salir">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Salir" onAction="#salirAplicacion"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+
+    <center>
+        <AnchorPane fx:id="contenidoPrincipal" />
+    </center>
+
+</BorderPane>
