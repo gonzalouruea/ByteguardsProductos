@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox fx:controller="grupofp.controlador.FiltrarPedidosEnviadosController"
+      xmlns:fx="http://javafx.com/fxml" spacing="10">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Filtrar Pedidos Enviados por Email" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+
+    <HBox spacing="10">
+        <Label text="Email del Cliente:"/>
+        <TextField fx:id="emailField" promptText="ejemplo@email.com" prefWidth="200"/>
+        <Button text="Buscar" onAction="#filtrarPedidos"/>
+    </HBox>
+
+    <ListView fx:id="listaPedidos" prefHeight="300" prefWidth="400"/>
+
+</VBox>

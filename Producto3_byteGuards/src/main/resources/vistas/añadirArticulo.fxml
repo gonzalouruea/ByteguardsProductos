@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.geometry.Insets?>
+<GridPane fx:controller="grupofp.controlador.AltaArticuloController"
+          xmlns:fx="http://javafx.com/fxml"
+          hgap="10" vgap="10">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+
+    <Label text="CodigoArticulo:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <TextField fx:id="tfCodigoArticulo" promptText="Introduce el código" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+    <Label text="Descripcion:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <TextField fx:id="tfDescripcion" promptText="Introduce la descripción" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+    <Label text="Precio:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <TextField fx:id="tfPrecio" promptText="Introduce el precio" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+    <Label text="GastosEnvio:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <TextField fx:id="tfGastosEnvio" promptText="Introduce los gastos de envio" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+    <Label text="TiempoPreparacion:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+    <TextField fx:id="tfTiempoPreparacion" promptText="Introduce el tiempo de preparación" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+    <Button text="Añadir Articulo" GridPane.rowIndex="5" GridPane.columnIndex="1"
+            onAction="#añadirArticulo"/>
+
+</GridPane>

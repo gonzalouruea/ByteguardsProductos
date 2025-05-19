@@ -32,7 +32,9 @@ public class ControladorPedido {
         datos.borrarPedido(numPedido);
     }
 
-    public ArrayList<String> todosPendientes(){
+
+
+   public ArrayList<String> todosPendientes(){
         ArrayList<String> arrTodosPendientes = new ArrayList<>();
         arrTodosPendientes = datos.pendientes();
         return arrTodosPendientes;

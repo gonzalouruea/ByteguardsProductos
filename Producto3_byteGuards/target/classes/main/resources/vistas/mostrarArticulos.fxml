@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="grupofp.controlador.MostrarArticulosController"
+      spacing="10">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+
+    <Label text="Lista de Todos los Articulos" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+
+    <ListView fx:id="listaArticulos" prefHeight="400" />
+
+    <Button text="Actualizar lista" onAction="#actualizarLista"/>
+</VBox>

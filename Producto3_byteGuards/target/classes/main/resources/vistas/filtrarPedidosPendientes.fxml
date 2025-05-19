@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="grupofp.controlador.FiltrarPedidosPendientesController">
+
+    <Label text="Filtrar Pedidos Pendientes por Email" style="-fx-font-size: 18px;"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Email:"/>
+        <TextField fx:id="emailField" prefWidth="250"/>
+        <Button text="Filtrar" onAction="#filtrarPedidosPendientes"/>
+    </HBox>
+
+    <ListView fx:id="listaPedidos" prefHeight="200" prefWidth="400"/>
+
+</VBox>

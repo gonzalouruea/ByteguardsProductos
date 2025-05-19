@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="grupofp.controlador.MostrarClientesPremiumController"
+      spacing="10">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+
+    <Label text="Clientes Premium" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+    <ListView fx:id="listViewClientesPremium" prefHeight="300" prefWidth="400"/>
+    <Button text="Actualizar Lista" onAction="#cargarClientesPremium"/>
+
+</VBox>
